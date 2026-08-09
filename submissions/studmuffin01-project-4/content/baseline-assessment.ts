@@ -80,7 +80,7 @@ export const rubricDimensions: RubricDimension[] = [
     levels: [
       "No explicit format or tone (naming the VP alone doesn’t count).",
       "Explicit format (bullets, one-page, word limit) or tone/reader-fit — but not both.",
-      "Explicit format plus how it should read (forwardable/skim-ready and/or calm, no blame).",
+      "Explicit format plus how it should read (e.g. skim/review/forwardable for the VP, and/or polite/professional tone).",
     ],
   },
 ];

@@ -75,7 +75,11 @@ function ModuleRow({
             {mod.summary}
           </div>
         </span>
-        <span className="meta">{completed ? "Review" : "Start"}</span>
+        <span
+          className={`module-cta${completed ? " is-review" : " is-start"}`}
+        >
+          {completed ? "Review" : "Start"}
+        </span>
       </Link>
     </li>
   );

@@ -115,64 +115,71 @@ export function LessonQuiz({ quiz }: Props) {
         const isCorrect = Boolean(userChoice?.correct);
 
         return (
-          <div className="panel" key={q.id}>
-            <h2
-              style={{ fontSize: "1.1rem", whiteSpace: "pre-line" }}
-            >
-              {index + 1}. {q.prompt}
-            </h2>
-            {q.choices.map((c) => {
-              let state: string | undefined;
-              if (submitted) {
-                if (c.correct) state = "correct";
-                else if (userChoiceId === c.id) state = "wrong";
-              } else if (userChoiceId === c.id) {
-                state = "selected";
-              }
-              const letter = c.id.toUpperCase();
-              return (
-                <button
-                  key={c.id}
-                  type="button"
-                  className="quiz-option"
-                  data-state={state}
-                  onClick={() => select(q.id, c.id)}
-                  disabled={submitted}
-                >
-                  <span className="quiz-letter">{letter}.</span>
-                  <span className="quiz-choice-text">{c.text}</span>
-                </button>
-              );
-            })}
-
-            {submitted && userChoice && correctChoice ? (
-              <p
-                className={
-                  isCorrect ? "quiz-result-ok" : "quiz-result-miss"
-                }
-              >
-                {isCorrect ? (
-                  <>
-                    Your answer: <strong>{userChoice.id.toUpperCase()}</strong> —
-                    correct.
-                  </>
-                ) : (
-                  <>
-                    Your answer:{" "}
-                    <strong className="quiz-result-wrong-letter">
-                      {userChoice.id.toUpperCase()}
-                    </strong>{" "}
-                    (incorrect). Correct answer:{" "}
-                    <strong className="quiz-result-right-letter">
-                      {correctChoice.id.toUpperCase()}
-                    </strong>
-                    .
-                  </>
-                )}
-              </p>
+          <div key={q.id}>
+            {q.partHeading ? (
+              <div className="quiz-part-heading" role="heading" aria-level={2}>
+                {q.partHeading}
+              </div>
             ) : null}
+            <div className="panel">
+              <h2
+                style={{ fontSize: "1.1rem", whiteSpace: "pre-line" }}
+              >
+                {index + 1}. {q.prompt}
+              </h2>
+              {q.choices.map((c) => {
+                let state: string | undefined;
+                if (submitted) {
+                  if (c.correct) state = "correct";
+                  else if (userChoiceId === c.id) state = "wrong";
+                } else if (userChoiceId === c.id) {
+                  state = "selected";
+                }
+                const letter = c.id.toUpperCase();
+                return (
+                  <button
+                    key={c.id}
+                    type="button"
+                    className="quiz-option"
+                    data-state={state}
+                    onClick={() => select(q.id, c.id)}
+                    disabled={submitted}
+                  >
+                    <span className="quiz-letter">{letter}.</span>
+                    <span className="quiz-choice-text">{c.text}</span>
+                  </button>
+                );
+              })}
 
-            {submitted ? <p className="faint">{q.explain}</p> : null}
+              {submitted && userChoice && correctChoice ? (
+                <p
+                  className={
+                    isCorrect ? "quiz-result-ok" : "quiz-result-miss"
+                  }
+                >
+                  {isCorrect ? (
+                    <>
+                      Your answer: <strong>{userChoice.id.toUpperCase()}</strong> —
+                      correct.
+                    </>
+                  ) : (
+                    <>
+                      Your answer:{" "}
+                      <strong className="quiz-result-wrong-letter">
+                        {userChoice.id.toUpperCase()}
+                      </strong>{" "}
+                      (incorrect). Correct answer:{" "}
+                      <strong className="quiz-result-right-letter">
+                        {correctChoice.id.toUpperCase()}
+                      </strong>
+                      .
+                    </>
+                  )}
+                </p>
+              ) : null}
+
+              {submitted ? <p className="faint">{q.explain}</p> : null}
+            </div>
           </div>
         );
       })}

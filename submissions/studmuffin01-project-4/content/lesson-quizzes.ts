@@ -9,6 +9,8 @@ export type LessonQuestion = {
   prompt: string;
   choices: LessonChoice[];
   explain: string;
+  /** Optional section banner shown above this question (e.g. Part A / Part B). */
+  partHeading?: string;
 };
 
 export type LessonQuiz = {
@@ -1234,7 +1236,7 @@ export const lessonQuizzes: Record<string, LessonQuiz> = {
       {
         id: "q4",
         prompt:
-          "Which SCORE component is being sabotaged here?\n\n“Our maintenance backlog increased by 25%. Use the attached work-order history. Act as a Reliability Engineer. Do something useful.”",
+          "Which SCORE component is missing?\n\n“Our maintenance backlog increased by 25%. Use the attached work-order history. Act as a Reliability Engineer. Do something useful.”",
         choices: [
           { id: "a", text: "Situation" },
           { id: "b", text: "Context" },
@@ -1274,6 +1276,8 @@ export const lessonQuizzes: Record<string, LessonQuiz> = {
     questions: [
       {
         id: "q1",
+        partHeading:
+          "Part A — SCORE mapping: map the plant scenario onto SCORE, then pick the strongest full prompt (Q1–Q6).",
         prompt: "Which statement best represents the Situation?",
         choices: [
           { id: "a", text: "Act as an Operations Manager." },
@@ -1376,6 +1380,8 @@ export const lessonQuizzes: Record<string, LessonQuiz> = {
       },
       {
         id: "q7",
+        partHeading:
+          "Part B — Trust check: evaluate AI output critically (Q7–Q10).",
         prompt:
           "Which statement should be treated with the greatest caution?",
         choices: [

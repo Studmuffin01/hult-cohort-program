@@ -117,6 +117,11 @@ function scoreO(text: string): 0 | 1 | 2 {
     /\bno new (date|promise|deadline|agreement)/i,
     /\bseparat(?:e|ing)\s+(confirmed|facts?)/i,
     /\bwithout (making )?promis/i,
+    /\brecommend\b.+\b(action|item)/i,
+    /\b\d+\s+action items?\b/i,
+    /\bget (the )?project back on track\b/i,
+    /\binform(?:ing)?\b.+\b(issue|status|current)\b/i,
+    /\bdo(?:\s+not|n'?t)\s+invent\b/i,
   ]);
 
   const audienceVp = hasAny(text, [
@@ -198,10 +203,14 @@ function scoreE(text: string): 0 | 1 | 2 {
   const readerFit = hasAny(text, [
     /\bforwardable\b/i,
     /\bsuitable (for|to) (a |the )?(VP|vice|senior)\b/i,
-    /\bfor (a |the )?VP to (skim|forward|read)\b/i,
+    // Use-cues: what the reader will do with the output (not audience alone).
+    /\bfor (a |the )?VP to (skim|forward|read|review|glance(?:\s+at)?|scan|decide)\b/i,
     /\bskim(?:mable)?\b/i,
     /\bread(?:y|able) for (a |the )?(VP|vice|senior)\b/i,
-    /\bVP can (skim|forward|read)\b/i,
+    /\bVP can (skim|forward|read|review|glance|scan|decide)\b/i,
+    /\b(share|circulate|pass along|send on)\b.+\b(VP|vice|senior|leadership)\b/i,
+    /\b(VP|vice|senior|leadership)\b.+\b(share|circulate|forward|review)\b/i,
+    /\bbefore (his|her|their|the) (next )?meeting\b/i,
   ]);
 
   const tone = hasAny(text, [
@@ -214,6 +223,9 @@ function scoreE(text: string): 0 | 1 | 2 {
     /\btone\s*:/i,
     /\bformal tone\b/i,
     /\bno\s+promis/i,
+    /\bpolite\b/i,
+    // Natural “polite and professional” without requiring the word “tone”.
+    /\bprofessional\b/i,
   ]);
 
   // Level 2: explicit format plus how it should read (reader fit and/or tone).
