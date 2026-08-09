@@ -286,6 +286,19 @@ textarea {
   filter: none;
 }
 
+.btn-danger {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--danger) 55%, var(--line));
+  color: var(--danger);
+}
+
+.btn-danger:hover {
+  background: color-mix(in srgb, var(--danger) 10%, var(--surface));
+  border-color: var(--danger);
+  color: var(--danger);
+  filter: none;
+}
+
 .btn-ghost {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.45);
@@ -392,6 +405,11 @@ textarea {
   font-family: var(--font-display);
   margin: 0 0 0.35rem;
   font-size: 1.25rem;
+}
+
+.reset-course-actions {
+  flex-wrap: wrap;
+  gap: 0.65rem;
 }
 
 .modules-intro h1 {

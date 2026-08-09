@@ -47,3 +47,12 @@ export function clearRetest() {
     /* ignore */
   }
 }
+
+export function clearBaseline() {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.removeItem(BASELINE_STORAGE_KEY);
+  } catch {
+    /* ignore */
+  }
+}

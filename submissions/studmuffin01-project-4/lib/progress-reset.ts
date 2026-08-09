@@ -1,5 +1,9 @@
 import { modules } from "@/content/course";
-import { clearRetest, loadBaseline } from "@/lib/baseline-storage";
+import {
+  clearBaseline,
+  clearRetest,
+  loadBaseline,
+} from "@/lib/baseline-storage";
 import {
   EXERCISE_COMPLETE_EVENT,
   usesLessonQuiz,
@@ -35,29 +39,11 @@ export function isCourseFullyComplete(): boolean {
   return modules.every((mod) => done.has(mod.slug));
 }
 
-/**
- * Full-course reset after completion.
- * Clears practice progress and the Module 10 retest.
- * Keeps Module 01 baseline (and its completion checkmark) locked.
- */
-export function resetCourseProgressPreservingBaseline(): {
-  ok: boolean;
-  reason?: string;
-} {
-  if (typeof window === "undefined") {
-    return { ok: false, reason: "unavailable" };
-  }
-  if (!isCourseFullyComplete()) {
-    return { ok: false, reason: "incomplete" };
-  }
-  if (!loadBaseline()?.result) {
-    return { ok: false, reason: "no-baseline" };
-  }
-
-  replaceCompletedModules([BASELINE_MODULE]);
-
+function clearPracticeStorage(options: { includeBaselineModule: boolean }) {
   for (const mod of modules) {
-    if (mod.slug === BASELINE_MODULE) continue;
+    if (!options.includeBaselineModule && mod.slug === BASELINE_MODULE) {
+      continue;
+    }
     try {
       window.localStorage.removeItem(`${ACK_PREFIX}${mod.slug}`);
     } catch {
@@ -78,8 +64,54 @@ export function resetCourseProgressPreservingBaseline(): {
     /* ignore */
   }
   clearRetest();
+}
+
+/**
+ * Practice reset after completion.
+ * Clears practice progress and the Module 10 retest.
+ * Keeps Module 01 baseline (and its completion checkmark) locked.
+ */
+export function resetCourseProgressPreservingBaseline(): {
+  ok: boolean;
+  reason?: string;
+} {
+  if (typeof window === "undefined") {
+    return { ok: false, reason: "unavailable" };
+  }
+  if (!isCourseFullyComplete()) {
+    return { ok: false, reason: "incomplete" };
+  }
+  if (!loadBaseline()?.result) {
+    return { ok: false, reason: "no-baseline" };
+  }
+
+  replaceCompletedModules([BASELINE_MODULE]);
+  clearPracticeStorage({ includeBaselineModule: false });
 
   dispatchProgressReset({ scope: "course" });
+  return { ok: true };
+}
+
+/**
+ * Hard reset after completion — wipes Module 01 baseline too.
+ * Learner starts Module 01 from a blank prompt again.
+ */
+export function resetCourseProgressFull(): {
+  ok: boolean;
+  reason?: string;
+} {
+  if (typeof window === "undefined") {
+    return { ok: false, reason: "unavailable" };
+  }
+  if (!isCourseFullyComplete()) {
+    return { ok: false, reason: "incomplete" };
+  }
+
+  replaceCompletedModules([]);
+  clearPracticeStorage({ includeBaselineModule: true });
+  clearBaseline();
+
+  dispatchProgressReset({ scope: "full" });
   return { ok: true };
 }
 
