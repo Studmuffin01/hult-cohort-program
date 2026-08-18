@@ -15,13 +15,15 @@ AI Prompting Academy — MVP workplace AI LMS for professional prompt craft (SCO
 
 ## App URL + user metrics
 - App: https://prompt-like-a-pro-red.vercel.app
-- Metrics source: self-hosted Ludwitt reference API (venture app id: TBD)
-- Snapshot (date): TBD — filling before merge (≥25 qualified external users)
-- Note: survey respondents are not counted toward the ≥25 user gate
+- Metrics source: self-hosted Ludwitt reference API on Railway — https://hult-cohort-program-production.up.railway.app
+- app_id: `7f6cbf89-341f-4c5d-bb50-482b9528f2ea`
+- Snapshot (2026-08-17): `unique_users: 1`, `qualified_users: 1` — see `docs/METRICS.md` and `docs/metrics-snapshot-2026-08-17.json`
+- Wiring verified: production `/integration` → Railway `/v1`; `lesson_started` → `mode=live`
+- Note: recruiting toward ≥25 qualified external users (survey ≠ users)
 
 ## Investor touch log
 `submissions/venture-studmuffin01/INVESTOR_LOG.md` (PII redacted) — entry pending qualified investor send
 
 ## Notes
-Used reference API for venture metrics per staff guidance (Week 4 Ludwitt host/docs issues).
-Discovery packet and PDFs added after PR open; requesting staff review of evidence pack.
+Used reference API on Railway because Week 4 Ludwitt host (`api.ludwitt.hult`) was unreliable — same approach peers used.
+Discovery packet and PDFs in repo; requesting staff review of evidence pack while user count climbs.

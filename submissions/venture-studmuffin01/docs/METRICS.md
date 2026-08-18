@@ -2,9 +2,20 @@
 
 ## Source (locked)
 
-**Self-hosted Ludwitt reference API** (`execution/ludwitt-hult-api` or deployed instance).
+**Self-hosted Ludwitt reference API** on Railway (same pattern Roger accepted for Week 4/5 peers).
 
-Reason: hosted Ludwitt/Hult developer hostname/docs were unreliable in Week 4; staff accept reference API if named in the PR. Distinct **venture** `app_id` so counts are not Week 4 leftovers.
+| Field | Value |
+|-------|--------|
+| API base (HTTPS) | `https://hult-cohort-program-production.up.railway.app` |
+| Events / metrics path prefix | `/v1` |
+| Full events base (Vercel `LUDWITT_API_BASE_URL`) | `https://hult-cohort-program-production.up.railway.app/v1` |
+| Venture / Academy `app_id` | `7f6cbf89-341f-4c5d-bb50-482b9528f2ea` |
+| Production app URL | https://prompt-like-a-pro-red.vercel.app |
+| Integration checklist | https://prompt-like-a-pro-red.vercel.app/integration |
+
+Reason: hosted `api.ludwitt.hult` was unreliable; staff accept a named reference-API instance. This `app_id` was registered on the Railway instance (17 Aug 2026).
+
+**Do not commit** `api_key` / `jwt_secret`. Events auth for this reference API uses the documented demo developer key in server env only.
 
 ## Rules
 
@@ -12,26 +23,45 @@ Reason: hosted Ludwitt/Hult developer hostname/docs were unreliable in Week 4; s
 - **Do not count** cohort members  
 - **Do not count** user ids containing `studmuffin01` / own handle  
 - Date-stamp every snapshot pasted into the PR  
+- Survey respondents are **not** product users  
 
-## Venture app registration
+## Wiring verified
 
-| Field | Value |
+| Check | Result |
 |-------|--------|
-| Venture app id | _TBD — register new app for Academy_ |
-| API base | _TBD — e.g. deployed reference API HTTPS URL or local noted for staff_ |
-| Production app URL | https://prompt-like-a-pro-red.vercel.app |
+| Railway `/health` | `{"ok":true,"service":"ludwitt-hult-api"}` |
+| Production `/integration` Events API base | Railway `/v1` (not `api.ludwitt.hult`) |
+| Launch JWT → session source `ludwitt` | OK |
+| Ping `lesson_started` | `mode=live` |
 
 ## Snapshots
 
-| Date (ET) | Unique external users | Notes |
-|-----------|----------------------|-------|
-| _YYYY-MM-DD_ | _n_ | Paste export / screenshot path |
+| Date (ET) | unique_users | qualified_users | Notes |
+|-----------|-------------:|----------------:|-------|
+| 2026-08-17 | 1 | 1 | Smoke test after Railway wiring; JSON in `metrics-snapshot-2026-08-17.json`. Not yet ≥25 external. |
+
+### Raw export (2026-08-17)
+
+```json
+{"unique_users":1,"qualified_users":1}
+```
+
+Source command (key not stored in repo):
+
+```text
+GET https://hult-cohort-program-production.up.railway.app/v1/apps/7f6cbf89-341f-4c5d-bb50-482b9528f2ea/metrics
+Authorization: Bearer <developer key>
+```
 
 ## PR paste block
 
 ```text
-Metrics source: self-hosted Ludwitt reference API (venture app id: …)
-Snapshot date: …
-Qualified external users: …
+Metrics source: self-hosted Ludwitt reference API on Railway
+API: https://hult-cohort-program-production.up.railway.app
+app_id: 7f6cbf89-341f-4c5d-bb50-482b9528f2ea
+Snapshot date: 2026-08-17
+unique_users: 1
+qualified_users: 1
 App URL: https://prompt-like-a-pro-red.vercel.app
+Note: plumbing verified (mode=live). Recruiting toward ≥25 qualified external users.
 ```

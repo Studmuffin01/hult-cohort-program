@@ -1,0 +1,9 @@
+{
+  "snapshot_at": "2026-08-17T21:46:00-04:00",
+  "api_base": "https://hult-cohort-program-production.up.railway.app",
+  "app_id": "7f6cbf89-341f-4c5d-bb50-482b9528f2ea",
+  "app_url": "https://prompt-like-a-pro-red.vercel.app",
+  "unique_users": 1,
+  "qualified_users": 1,
+  "notes": "Post-wiring smoke test (lesson_started mode=live). Not a pass-gate snapshot."
+}
