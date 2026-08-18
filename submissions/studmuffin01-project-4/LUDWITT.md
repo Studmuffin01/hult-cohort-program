@@ -92,7 +92,19 @@ Quick register from this package:
 node scripts\register-ludwitt-app.mjs
 ```
 
-## F. Production (Vercel) — current status
+## F. Public “Start learning” (outreach)
+
+Production supports self-serve entry **without** minting `/launch?token=…` links:
+
+1. Learner opens https://prompt-like-a-pro-red.vercel.app  
+2. Clicks **Start learning** → `POST /api/start` sets a session cookie (`source: public`, unique `userId`)  
+3. Lands on the first module → `lesson_started` posts to the metrics API  
+
+Share the homepage URL for outreach. Ludwitt launcher tokens still work via `/launch`.
+
+Keep `ALLOW_DEV_BYPASS=false` in production (dev bypass is separate and still local-only).
+
+## G. Production (Vercel) — current status
 
 Deployed. Keep these Vercel env vars in sync (Production):
 

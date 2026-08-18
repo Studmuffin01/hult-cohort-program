@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { academyMeta } from "@/content/academy";
 
+/** Public nav — keep lean for learners. Wiring pages stay at /launch and /integration (not linked here). */
 export function SiteHeader() {
   return (
     <header className="site-header">
@@ -12,8 +13,6 @@ export function SiteHeader() {
         <Link href="/">Home</Link>
         <Link href="/modules">Modules</Link>
         <Link href="/pricing">Pricing</Link>
-        <Link href="/launch">Launch</Link>
-        <Link href="/integration">Ludwitt</Link>
       </nav>
     </header>
   );

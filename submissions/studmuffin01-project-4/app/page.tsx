@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { StartLearningButton } from "@/components/StartLearningButton";
 import { academyMeta } from "@/content/academy";
 import { courseMeta, scoreLegend } from "@/content/course";
 
@@ -30,15 +30,10 @@ export default function HomePage() {
             {academyMeta.tagline}
           </p>
           <div className="cta-row">
-            <Link className="btn" href="/modules">
-              Open course
-            </Link>
-            <Link className="btn btn-ghost" href="/pricing">
-              Pricing
-            </Link>
+            <StartLearningButton label="Start learning" />
           </div>
           <p className="hero-meta">
-            ~{courseMeta.runtimeMinutes} min · Professionals
+            ~{courseMeta.runtimeMinutes} min · Free to start · Professionals
           </p>
         </div>
       </section>
