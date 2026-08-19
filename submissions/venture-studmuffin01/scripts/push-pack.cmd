@@ -34,10 +34,16 @@ git commit -m "Add venture survey discovery packet and investor PDF exports"
 REM continue even if nothing to commit
 
 echo === Push ===
-git push -u origin participants/summer26/phase-2-venture/studmuffin01
+REM Prefer "fork" (Studmuffin01); fall back to origin only if that is the fork
+git remote -v
+git push -u fork participants/summer26/phase-2-venture/studmuffin01
 if errorlevel 1 (
-  echo Push failed — check remote
-  exit /b 1
+  echo Push to fork failed — trying origin...
+  git push -u origin participants/summer26/phase-2-venture/studmuffin01
+  if errorlevel 1 (
+    echo Push failed — check remotes. Need write access to Studmuffin01 fork.
+    exit /b 1
+  )
 )
 
 echo === Update PR #296 body ===
