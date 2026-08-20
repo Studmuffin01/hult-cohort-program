@@ -20,10 +20,14 @@ Redact personal emails/phone numbers before pasting into the public PR body (pat
 
 ## Log
 
-<!-- After you SEND the investor email, fill Name / Firm / Outcome. Do not invent. -->
+## 2026-08-20 — Reach Capital — Early-stage VC (learning / work)
+- Type: email to info@reachcapital.com
+- Outcome: Sent venture overview, one-pager, and pitch deck; asked for 20 min feedback on deck/pricing or intro to L&D buyer
+- Materials: `docs/venture-overview.pdf`, `docs/one-pager.pdf`, `docs/pitch-deck.pdf`
+- Verified by placement lead: ☐
 
-## 2026-08-16 — {Name} — {Title} at {Firm}
-- Type: email
-- Outcome: Pitch + one-pager sent; asked for 20 min feedback / intro
-- Materials: `docs/pitch-deck.pdf`, `docs/one-pager.pdf`
+## 2026-08-20 — Sergio Monsalve — Founding Partner, Roble Ventures
+- Type: pitch form (robleventures.com/pitch-us)
+- Outcome: Submitted full pitch; deck via Google Drive link; live demo linked; confirmation received
+- Materials: pitch-deck.pdf (Drive link), https://prompt-like-a-pro-red.vercel.app
 - Verified by placement lead: ☐

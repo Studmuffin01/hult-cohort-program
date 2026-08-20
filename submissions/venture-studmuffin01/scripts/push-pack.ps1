@@ -9,10 +9,13 @@ $docs = Join-Path $venture "docs"
 
 Set-Location $repo
 
-# Regenerate PDFs if Python available
-$gen = Join-Path $venture "scripts\generate_pdfs.py"
-if (Get-Command python -ErrorAction SilentlyContinue) {
-  python $gen
+# Regenerate PDFs if Node or Python available
+$genNode = Join-Path $venture "scripts\generate_pdfs.mjs"
+$genPy = Join-Path $venture "scripts\generate_pdfs.py"
+if (Get-Command node -ErrorAction SilentlyContinue) {
+  node $genNode
+} elseif (Get-Command python -ErrorAction SilentlyContinue) {
+  python $genPy
 }
 
 if (-not (Test-Path (Join-Path $docs "one-pager.pdf"))) { throw "Missing one-pager.pdf" }

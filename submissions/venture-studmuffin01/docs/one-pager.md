@@ -4,17 +4,17 @@
 
 ## Headline
 
-**AI Prompting Academy** — An MVP workplace AI learning platform (LMS) that helps professionals master prompt craft for Microsoft Copilot and other AI assistants.
+**AI Prompting Academy** — A workplace learning platform that helps professionals develop practical AI prompting skills for Microsoft Copilot and other AI assistants.
 
 ## The problem
 
-Teams rolled out Copilot, but outputs stay mushy, invented, or unusable in front of a VP. Tip threads and long MOOCs don’t create a repeatable on-the-job habit.
+Teams rolled out Copilot, but outputs stay mushy, invented, or unusable in front of a VP. Tip threads and long MOOCs don't create a repeatable on-the-job habit.
 
 ## The product
 
-- Short **SCORE** curriculum (*Prompt Like a Pro*) inside an Academy LMS shell  
-- Progress through modules, quizzes, baseline → retest  
-- **Individuals** buy personal access; **businesses** buy team seats  
+- Short **SCORE** curriculum (*Prompt Like a Pro*) inside an Academy LMS shell
+- Progress through modules, quizzes, baseline → retest
+- **Individuals** buy personal access; **businesses** buy team seats
 
 ## Why now
 
@@ -29,9 +29,9 @@ Generative AI is mandated at work; training budgets exist; Microsoft Copilot dis
 
 ## Traction
 
-- Live app: https://prompt-like-a-pro-red.vercel.app  
-- Customer discovery: **35** survey responses (13–15 Aug 2026) — problem + soft WTP validated; **11** pilot leads  
-- External product users: _TBD_ (venture metrics, date-stamped; survey ≠ users)  
+- Live app: https://prompt-like-a-pro-red.vercel.app
+- Customer discovery: **35** survey responses (13–15 Aug 2026); **11** pilot leads
+- External product users: **10** qualified (metrics snapshot 20 Aug 2026 via Ludwitt reference API); recruiting toward ≥25 — **survey ≠ users**
 
 ## The ask
 
@@ -39,4 +39,6 @@ Generative AI is mandated at work; training budgets exist; Microsoft Copilot dis
 
 ## Contact
 
-Rawle Arneaud · @Studmuffin01 · Hult Cohort Program
+Rawle Arneaud · Founder, AI Prompting Academy  
+Email: studmuffin_tt@yahoo.com  
+Live: https://prompt-like-a-pro-red.vercel.app

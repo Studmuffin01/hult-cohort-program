@@ -3,85 +3,63 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 4 0 obj
-<< /Length 1450 >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+5 0 obj
+<< /Length 1643 >>
 stream
 BT
-/F1 16 Tf
-50 740 Td
-(AI Prompting Academy -- One-pager) Tj
-0 -24 Td
-/F1 11 Tf
-(MVP workplace AI LMS for prompt craft. Rawle Arneaud / @Studmuffin01) Tj
-0 -28 Td
 /F1 12 Tf
-(PROBLEM) Tj
-0 -16 Td
-/F1 10 Tf
-(Copilot is rolled out; drafts stay mushy, invented, or unusable upstairs.) Tj
-0 -14 Td
-(Tip threads and long MOOCs do not create an on-the-job habit.) Tj
-0 -22 Td
-/F1 12 Tf
-(PRODUCT) Tj
-0 -16 Td
-/F1 10 Tf
-(- SCORE curriculum /Prompt Like a Pro/ in an Academy LMS shell) Tj
-0 -14 Td
-(- Modules, quizzes, baseline to retest, progress tracking) Tj
-0 -14 Td
-(- Individuals + team seats at /pricing) Tj
-0 -22 Td
-/F1 12 Tf
-(WHY NOW) Tj
-0 -16 Td
-/F1 10 Tf
-(GenAI is mandated at work; skill gap is method, not model access.) Tj
-0 -22 Td
-/F1 12 Tf
-(PRICING /pilot hypothesis/) Tj
-0 -16 Td
-/F1 10 Tf
-(Individual: $29 one-time / $9 mo  |  Team: $199 / 10 seats) Tj
-0 -22 Td
-/F1 12 Tf
-(TRACTION) Tj
-0 -16 Td
-/F1 10 Tf
-(- Live: https://prompt-like-a-pro-red.vercel.app) Tj
-0 -14 Td
-(- Customer discovery: 35 survey responses /13-15 Aug 2026/) Tj
-0 -14 Td
-(- 11 pilot leads asked to be contacted) Tj
-0 -14 Td
-(- Product users: venture metrics in PR /survey is not users/) Tj
-0 -22 Td
-/F1 12 Tf
-(ASK) Tj
-0 -16 Td
-/F1 10 Tf
-(20 minutes for deck/pricing feedback, or intro to an L&D buyer.) Tj
+1 0 0 1 50 750 Tm (AI Prompting Academy  One-pager) Tj
+1 0 0 1 50 734 Tm () Tj
+1 0 0 1 50 718 Tm (Workplace learning platform for practical AI prompting skills.) Tj
+1 0 0 1 50 702 Tm (Rawle Arneaud · Founder, AI Prompting Academy) Tj
+1 0 0 1 50 686 Tm () Tj
+1 0 0 1 50 670 Tm (PROBLEM) Tj
+1 0 0 1 50 654 Tm (Copilot is rolled out; drafts stay mushy, invented, or unusable upstairs.) Tj
+1 0 0 1 50 638 Tm (Tip threads and long MOOCs do not create an on-the-job habit.) Tj
+1 0 0 1 50 622 Tm () Tj
+1 0 0 1 50 606 Tm (PRODUCT) Tj
+1 0 0 1 50 590 Tm (- SCORE curriculum \(Prompt Like a Pro\) in an Academy LMS shell) Tj
+1 0 0 1 50 574 Tm (- Modules, quizzes, baseline to retest, progress tracking) Tj
+1 0 0 1 50 558 Tm (- Individuals + team seats \(/pricing\)) Tj
+1 0 0 1 50 542 Tm () Tj
+1 0 0 1 50 526 Tm (WHY NOW) Tj
+1 0 0 1 50 510 Tm (GenAI is mandated at work; skill gap is method, not model access.) Tj
+1 0 0 1 50 494 Tm () Tj
+1 0 0 1 50 478 Tm (PRICING \(pilot hypothesis\)) Tj
+1 0 0 1 50 462 Tm (Individual: $29 one-time / $9 mo | Team: $199 / 10 seats) Tj
+1 0 0 1 50 446 Tm () Tj
+1 0 0 1 50 430 Tm (TRACTION) Tj
+1 0 0 1 50 414 Tm (- Live: https://prompt-like-a-pro-red.vercel.app) Tj
+1 0 0 1 50 398 Tm (- Customer discovery: 35 survey responses \(13-15 Aug 2026\)) Tj
+1 0 0 1 50 382 Tm (- 11 pilot leads \(asked to be contacted\)) Tj
+1 0 0 1 50 366 Tm (- Product users: 10 qualified external \(20 Aug 2026 snapshot\)) Tj
+1 0 0 1 50 350 Tm (- Survey respondents are not product users) Tj
+1 0 0 1 50 334 Tm () Tj
+1 0 0 1 50 318 Tm (ASK) Tj
+1 0 0 1 50 302 Tm (20 minutes for deck/pricing feedback, or intro to an L&D buyer.) Tj
 ET
 endstream
 endobj
-5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
-endobj
 xref
-0 6
+0 8
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
 0000000115 00000 n 
-0000000266 00000 n 
-0000001770 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+0000000345 00000 n 
+0000001988 00000 n 
 trailer
-<< /Size 6 /Root 1 0 R >>
+<< /Size 8 /Root 1 0 R >>
 startxref
-1847
+2006
 %%EOF

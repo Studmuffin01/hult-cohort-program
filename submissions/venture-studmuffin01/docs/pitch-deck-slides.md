@@ -8,11 +8,11 @@ pdf_options:
 
 **Workplace AI learning for prompt craft**
 
-Rawle Arneaud · @Studmuffin01 · Hult Cohort Program · Summer 2026
+Rawle Arneaud · Founder, AI Prompting Academy
 
 Live: https://prompt-like-a-pro-red.vercel.app
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Problem
 
@@ -24,26 +24,26 @@ Prompts still fail:
 - Invented certainty → unsafe to send upstairs
 - Rewrites burn the time AI was meant to save
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Insight
 
 The skill gap is **method**, not model access.
 
-Teams do not need another chatbot.  
+Teams do not need another chatbot.
 They need a short, repeatable way to ask.
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Solution
 
-**AI Prompting Academy** — an MVP workplace AI LMS.
+**AI Prompting Academy** — a workplace learning platform.
 
 First course: **SCORE** (*Prompt Like a Pro*) for Copilot and other assistants.
 
 Short path. Real work. Habit that sticks.
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Product
 
@@ -52,7 +52,7 @@ Short path. Real work. Habit that sticks.
 - Progress tracking
 - Individual access + team seats at `/pricing`
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Demo
 
@@ -60,7 +60,7 @@ Short path. Real work. Habit that sticks.
 
 Open the live course → work a SCORE prompt on a real email or status update.
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Market (hypothesis — cite in plan)
 
@@ -72,7 +72,7 @@ Open the live course → work a SCORE prompt on a real email or status update.
 
 Full sources: `docs/market-research.md`
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Competition
 
@@ -85,7 +85,7 @@ Full sources: `docs/market-research.md`
 
 **Wedge:** 60-minute SCORE method + paid access.
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Business model
 
@@ -95,24 +95,25 @@ Full sources: `docs/market-research.md`
 | Team | $199 / 10 seats |
 | Enterprise | Custom (roadmap) |
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Go-to-market
 
 1. Founder-led outreach to professionals who live the Copilot pain
 2. Sell a dated paid session, then productize
 3. Convert early users into interviews and design partners
-4. Hult / professional network wedge
+4. Professional network + pilot-customer wedge
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Traction
 
-- Live production app
-- Venture metrics: date-stamped external users (see PR / `docs/METRICS.md`)
-- Customer interviews in progress (see `docs/market-research.md`)
+- Live production app: https://prompt-like-a-pro-red.vercel.app
+- Customer discovery: **35** survey responses (13–15 Aug 2026); **11** pilot leads
+- Product users: **10** qualified external (20 Aug 2026 snapshot); recruiting for scale
+- Survey validates problem + soft WTP — **not** product users or investors
 
-<div style="page-break-after: always;"></div>
+ 
 
 # The ask
 
@@ -123,15 +124,15 @@ Full sources: `docs/market-research.md`
 
 Not asking for a term sheet in this meeting — asking for signal and intros.
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Team
 
-**Rawle Arneaud** (@Studmuffin01)
+**Rawle Arneaud** — Founder, AI Prompting Academy
 
-Built and shipped the SCORE learning app in the Hult Cohort Program; packaging it this week as AI Prompting Academy with pricing, investor materials, and external traction.
+Built and shipped the SCORE learning app; packaging as AI Prompting Academy with pricing, investor materials, and external traction.
 
-<div style="page-break-after: always;"></div>
+ 
 
 # Close
 
@@ -139,4 +140,4 @@ Built and shipped the SCORE learning app in the Hult Cohort Program; packaging i
 
 https://prompt-like-a-pro-red.vercel.app
 
-Rawle Arneaud · @Studmuffin01 · Hult Cohort Program
+Rawle Arneaud · Founder, AI Prompting Academy
